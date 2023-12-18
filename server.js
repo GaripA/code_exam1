@@ -2,6 +2,7 @@ import express from 'express';
 import Task from './models/Task.js';
 
 const app = express();
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -39,5 +40,5 @@ app.get("/", async function (req, res) {
 });*/
 
 app.listen(4000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 4000");
 });

@@ -1,3 +1,10 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Liste de courses</title>
+  </head>
+
 <h1>liste des achats</h1>
 <ul>
   <% for(elem of contenu) { %>
@@ -9,9 +16,12 @@
   <% } %>
 </ul>
 <form action="/add" method="POST">
-  <label for="name">Nom du produit :</label>
-  <input type="text" id="name" name="name" />
-  <label for="quantity">Quantité :</label>
-  <input type="text" id="quantity" name="quantity" />
+  <ul>
+  <li><label for="name">Nom du produit :</label>
+  <input type="text" id="name" name="name" /></li>
+  <li><label for="quantity">Quantité :</label>
+  <input type="text" id="quantity" name="quantity" /></li>
   <input type="submit" />
+</ul>
 </form>
+</html>
