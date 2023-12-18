@@ -1,0 +1,17 @@
+<h1>liste des achats</h1>
+<ul>
+  <% for(elem of contenu) { %>
+    <% if (elem.purchased == 0) { %>
+      <li> - <%= elem.name %> <%= elem.quantity %> - <a href="/Acheter/<%= elem.id %>">Acheter</a> - <a href="/delete/<%= elem.id %>">Delete</a></li>
+    <% } else { %>
+      <li style="text-decoration: line-through;"> -<%= elem.name %> <%= elem.quantity %></li>
+    <% } %>
+  <% } %>
+</ul>
+<form action="/add" method="POST">
+  <label for="name">Nom du produit :</label>
+  <input type="text" id="name" name="name" />
+  <label for="quantity">Quantité :</label>
+  <input type="text" id="quantity" name="quantity" />
+  <input type="submit" />
+</form>
